@@ -27,8 +27,12 @@ const LoginForm = () => {
         // Berhasil login, ambil token dari response
         const data = await response.json();
         const token = data.token;
+        const role = data.role;
+        const permission = data.permission;
 
         localStorage.setItem('token', token);
+        localStorage.setItem('role', role);
+        localStorage.setItem('permission', permission);
         
         console.log('Login berhasil!');
         navigate('/dashboard');

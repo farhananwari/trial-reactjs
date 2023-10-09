@@ -4,6 +4,8 @@ import Eroorz from '../views/error/404'
 
 export default function Dashboard() {
     const token = localStorage.getItem('token');
+    const role = localStorage.getItem('role');
+    const permission = localStorage.getItem('permission');
     const navigate = useNavigate();
 
     const handleLogout = async () => {
@@ -16,7 +18,6 @@ export default function Dashboard() {
                     'Authorization': `Bearer ${token}`, 
                 },
             });
-
             if (response.ok) {
                 localStorage.removeItem('token');
                 navigate('/login');

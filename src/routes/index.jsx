@@ -15,21 +15,18 @@ import PostEdit from '../views/posts/edit.jsx';
 
 import Dashboard from '../views/dashboard.jsx';
 
+import Error from '../views/error/404.jsx'
+
 
 function RoutesIndex() {
     
     return (
         <Routes>
+
             <Route path="/dashboard" element={<Dashboard />} />
-            {/* route "/posts" */}
             <Route path="/posts" element={<PostIndex />} />
-
-            {/* route "/posts/create" */}
             <Route path="/posts/create" element={<PostCreate />} />
-
-            {/* route "/posts/edit/:id" */}
             <Route path="/posts/edit/:id" element={<PostEdit />} />
-
         </Routes>
         
     )
